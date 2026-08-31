@@ -69,7 +69,7 @@ Base URL: http://localhost:3000/api/v1/users
 
 Payload de Entrada:
 
-```text
+```json
 {
   "name": "Mariana Costa",
   "email": "mariana.costa@example.com",
@@ -79,7 +79,7 @@ Payload de Entrada:
 
 Resposta (201 Created):
 
-```text
+```json
 {
   "status": "success",
   "data": {
@@ -99,7 +99,7 @@ Resposta (201 Created):
 
 Payload de Entrada:
 
-```text
+```json
 {
   "name": "Mariana Costa"
 }
@@ -107,7 +107,7 @@ Payload de Entrada:
 
 Resposta (400 Bad Request):
 
-```text
+```json
 {
   "status": "fail",
   "error": {
