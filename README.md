@@ -1,4 +1,4 @@
-# API Connect – Gerenciamento de Usuários 🚀
+# API Connect – Gerenciamento de Usuários
 
 > API RESTful desenvolvida durante a disciplina de **Desenvolvimento Back-end** do Curso de Ciência da Computação da UP. O projeto consiste na construção de um Produto Mínimo Viável (MVP) para gerenciamento de usuários de uma startup, aplicando padrões da arquitetura REST, tratamento de códigos de status HTTP e validação sistemática de payloads.
 
