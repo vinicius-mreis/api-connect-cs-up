@@ -65,7 +65,7 @@ Base URL: http://localhost:3000/api/v1/users
 
 ## 🧪 Exemplos de Requisição e Resposta
 
-1. Criar Usuário com Sucesso (POST /api/v1/users)
+### 1. Criar Usuário com Sucesso (POST /api/v1/users)
 
 Payload de Entrada:
 {
@@ -73,6 +73,7 @@ Payload de Entrada:
   "email": "mariana.costa@example.com",
   "role": "developer"
 }
+
 Resposta (201 Created):
 {
   "status": "success",
@@ -86,12 +87,15 @@ Resposta (201 Created):
   }
 }
 
-3. Falha de Validação (POST /api/v1/users sem o campo e-mail)
-   
+---
+
+### 2. Falha de Validação (POST /api/v1/users sem e-mail)
+
 Payload de Entrada:
 {
   "name": "Mariana Costa"
 }
+
 Resposta (400 Bad Request):
 {
   "status": "fail",
@@ -100,11 +104,12 @@ Resposta (400 Bad Request):
     "message": "Dados de entrada inválidos.",
     "details": [
       "O campo 'email' é obrigatório e deve ser um texto válido."
-   ]
+    ]
   }
 }
 
+---
 
-CONSIDERAÇÕES FINAIS
+## 📝 Considerações Finais
 
 A experiência consolidou a aplicação dos padrões REST, da arquitetura modular (SoC) e do fluxo de requisição-resposta com Node.js e Express. O isolamento das camadas de servidor, rotas, controladores e dados garantiu legibilidade, facilidade de manutenção e testabilidade. A utilização de UUIDs v4 assegurou a unicidade dos registros na persistência em memória, enquanto as validações e respostas padronizadas em JSON (status 200, 201, 204, 400 e 404) aumentaram a confiabilidade do sistema. Por fim, os testes no Postman e o versionamento via Git/GitHub reforçaram a importância de preparar e documentar a API para cenários reais de integração.
