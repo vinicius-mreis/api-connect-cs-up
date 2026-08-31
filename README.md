@@ -66,6 +66,7 @@ Base URL: http://localhost:3000/api/v1/users
 ## 🧪 Exemplos de Requisição e Resposta
 
 1. Criar Usuário com Sucesso (POST /api/v1/users)
+
 Payload de Entrada:
 {
   "name": "Mariana Costa",
@@ -85,7 +86,8 @@ Resposta (201 Created):
   }
 }
 
-2. Falha de Validação (POST /api/v1/users sem o campo e-mail)
+3. Falha de Validação (POST /api/v1/users sem o campo e-mail)
+   
 Payload de Entrada:
 {
   "name": "Mariana Costa"
@@ -98,20 +100,11 @@ Resposta (400 Bad Request):
     "message": "Dados de entrada inválidos.",
     "details": [
       "O campo 'email' é obrigatório e deve ser um texto válido."
-    ]
+   ]
   }
 }
 
 
+CONSIDERAÇÕES FINAIS
 
-================================================================================
-SÍNTESE E REFLEXÃO FINAL DA EXPERIÊNCIA PRÁTICA II
-================================================================================
-
-A realização da Experiência Prática II proporcionou uma imersão completa no ciclo de desenvolvimento de uma API RESTful modularizada utilizando o ecossistema Node.js e o framework Express. Durante o projeto, foi possível consolidar a transição teórica para a aplicação prática dos conceitos de arquitetura orientada a serviços, separação de responsabilidades (SoC) e rigor semântico no uso do protocolo HTTP.
-
-O desenvolvimento do Produto Mínimo Viável (MVP) permitiu compreender a relevância de isolar a camada de servidor (server.js), de configuração (app.js), de controle (userController.js), de roteamento (userRoutes.js) e de dados (usersData.js). Essa modularização demonstrou ser fundamental para a manutenção, legibilidade e testabilidade do sistema. A escolha do uso de UUIDs v4 para identificadores universais garantiu a consistência da persistência simulada sem gerar acoplamento a sequências numéricas locais.
-
-A etapa de testes através do Postman evidenciou a importância de preparar a aplicação para cenários reais de borda. A implementação de validações para campos obrigatórios (400 Bad Request), o tratamento de recursos inexistentes (404 Not Found) e a padronização dos envelopes de resposta JSON garantiram a previsibilidade exigida para integração com equipes de front-end. 
-
-Por fim, o versionamento com Git e a publicação no GitHub reforçaram as boas práticas de documentação via README.md, evidenciando que a construção de software profissional requer não apenas código funcional, mas também clareza na disponibilização da solução para a comunidade técnica.
+A experiência consolidou a aplicação dos padrões REST, da arquitetura modular (SoC) e do fluxo de requisição-resposta com Node.js e Express. O isolamento das camadas de servidor, rotas, controladores e dados garantiu legibilidade, facilidade de manutenção e testabilidade. A utilização de UUIDs v4 assegurou a unicidade dos registros na persistência em memória, enquanto as validações e respostas padronizadas em JSON (status 200, 201, 204, 400 e 404) aumentaram a confiabilidade do sistema. Por fim, os testes no Postman e o versionamento via Git/GitHub reforçaram a importância de preparar e documentar a API para cenários reais de integração.
